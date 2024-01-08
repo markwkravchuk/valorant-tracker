@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <title id = "titleOfResults">Stats</title>
+  <link rel="stylesheet" type="text/css" rel="noopener" target="_blank" href="styles.css">
+</head>
+<body>
+
+  <div class="header">
+    <div class="header-info">
+      <div class="icon-wrappers">
+        <div class="image" id="profile-icon"></div>
+      </div>
+      <div class="profile-info">
+        <div id="username-info">
+          <span id="username">Username</span> #<span id="tagline">Tagline</span>
+        </div>
+        <div id="level-container">Level: <span id="level"></div>
+        <!-- <span id="puuid"></span></h1> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="flex-container">
+    <div class="sidebar">
+      <div id="sidebar-title">OVERVIEW</div>
+      <div class="sidebar-wrapper">
+        <div class="sidebar-content">
+          <div class="sidebar-subheading">RANK</div>
+          <div class="sidebar-subcontent">
+            <div class="current-rank-info">
+              <div class="sidebar-label">Current rank:</div>
+              <div class="rank-content">
+                <div id="current-rank-icon"></div>
+                <div class="value" id="current-rank-number"></div>
+              </div>
+            </div>
+            <div class="peak-rank-info">
+              <div class="sidebar-label">Peak rank:</div>
+              <div id="peak-rank-icon"></div>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar-content">
+          <div class="sidebar-subheading">ACCURACY</div>
+          <div class="sidebar-subcontent accuracy-subcontent">
+            <div class="current-hsp"><div class="sidebar-label">Headshot %:</div><div class="accuracy-content"><div class="value" id="headshot-percentage"></div></div></div>
+            <div class="current-bsp"><div class="sidebar-label">Bodyshot %:</div><div class="accuracy-content"><div class="value" id="bodyshot-percentage"></div></div></div>
+            <div class="current-lsp"><div class="sidebar-label">Legshot %:</div><div class="accuracy-content"><div class="value" id="legshot-percentage"></div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-content">
+      <div class="main-content-header">
+        <div id="match-history-header">MATCH HISTORY</div>
+        <h5>Based on the last <span id="totalGames"></span> games:</h5>
+        <select id="gamemode-selector">
+          <option value="all" selected>ALL MODES</option>
+          <option value="Competitive">COMPETITIVE</option>
+          <option value="Team Deathmatch">TEAM DEATHMATCH</option>
+          <option value="Spike Rush">SPIKE RUSH</option>
+          <option value="Deathmatch">DEATHMATCH</option>
+        </select>
+      </div>
+      <div id="match-history-container"></div>
+      <div id="load-more-container"><button id="load-more-button">Load More</button></div>
+    </div>
+  </div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
+
